@@ -1,0 +1,339 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "TXaddresses",
+				"outputs": [
+					{
+						"internalType": "bytes20",
+						"name": "payment_ID",
+						"type": "bytes20"
+					},
+					{
+						"internalType": "address",
+						"name": "client_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "paymentHash",
+						"type": "bytes20"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "addTransaction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes20",
+						"name": "",
+						"type": "bytes20"
+					}
+				],
+				"name": "clienttransactions",
+				"outputs": [
+					{
+						"internalType": "bytes20",
+						"name": "payment_ID",
+						"type": "bytes20"
+					},
+					{
+						"internalType": "address",
+						"name": "client_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "paymentHash",
+						"type": "bytes20"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_client_ID",
+						"type": "address"
+					}
+				],
+				"name": "getAllTransactionsOfAClient",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes20",
+								"name": "payment_ID",
+								"type": "bytes20"
+							},
+							{
+								"internalType": "address",
+								"name": "client_ID",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "recipient_ID",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountOfPayment",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timeOfPayment",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "Remarks",
+								"type": "string"
+							},
+							{
+								"internalType": "bytes20",
+								"name": "paymentHash",
+								"type": "bytes20"
+							}
+						],
+						"internalType": "struct BankTransaction.Transaction[]",
+						"name": "all",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes20",
+						"name": "_payment_ID",
+						"type": "bytes20"
+					}
+				],
+				"name": "getPaymentByID",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes20",
+								"name": "payment_ID",
+								"type": "bytes20"
+							},
+							{
+								"internalType": "address",
+								"name": "client_ID",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "recipient_ID",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountOfPayment",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timeOfPayment",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "Remarks",
+								"type": "string"
+							},
+							{
+								"internalType": "bytes20",
+								"name": "paymentHash",
+								"type": "bytes20"
+							}
+						],
+						"internalType": "struct BankTransaction.Transaction",
+						"name": "txs",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "clientID",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipientID",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "remarks",
+						"type": "string"
+					}
+				],
+				"name": "setTransaction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "transactions",
+				"outputs": [
+					{
+						"internalType": "bytes20",
+						"name": "payment_ID",
+						"type": "bytes20"
+					},
+					{
+						"internalType": "address",
+						"name": "client_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient_ID",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeOfPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "paymentHash",
+						"type": "bytes20"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BankTransaction.sol": "BankTransaction"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BankTransaction.sol": {
+			"keccak256": "0xa99aca02fafcd0c9393c75e214d0de56fb46fb453ec36324ea9f544762cb48a8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2741ecfc32d50af599d1112929fa65264e0d8ded10810d2bd81276f2442d323f",
+				"dweb:/ipfs/QmZF7ePqsqiH6DPKYokQvXh4xTqs7YdEfHUGbauZMLKoXe"
+			]
+		}
+	},
+	"version": 1
+}
